@@ -1,0 +1,151 @@
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Orens}{Xhagolli}
+
+\phone[mobile]{+1 267 393 5478}
+\email{oxx6096@rit.edu}
+\homepage{http://orensxhagolli.com}
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\centering
+
+\small{My goal is to build end-to-end, scalable, state-of-the-art Machine Learning solutions.}
+
+\section{Education}
+
+\vspace{4pt}
+
+\begin{itemize}
+
+\item{\cventry{2014 - 2018}{B.S./M.S. Degree in Computer Science}{Rochester Institute of Technology}{Rochester, NY}{\textit{Magna Cum Laude}}{}}
+
+\end{itemize}
+
+\section{Employment}
+
+\vspace{4pt}
+
+\begin{itemize}
+\item{\cventry{Mar. 2019 - Present}{Software Engineer, Amplify}{Microsoft}{Redmond, WA}{}{\vspace{3pt}Developing tools to help scale data science processes and metrics generation across the company.}}
+
+\vspace{4pt}
+
+\item{\cventry{Nov. 2018 - Mar. 2019}{Learning Facilitator, Columbia University}{Emeritus Institute of Management}{Singapore}{}{\vspace{3pt}Applied Machine Learning course staff. Held office hours and webinars, and supervised homework assignments.}}
+
+\vspace{4pt}
+
+\item{\cventry{Aug. 2018 - December, 2018}{Graduate Teaching Assistant, Department of Computer Science}{Rochester Institute of Technology}{Rochester, NY}{}{\vspace{3pt}Held recitations, office/tutoring hours. Part of the intro to CS sequence (CS1, CS2, CSAPX) staff.}}
+
+\vspace{4pt}
+
+\item{\cventry{Summer 2018}{Data Science Intern, Amplify}{Microsoft}{Redmond, WA}{}{\vspace{3pt} Timeseries analysis through classical (ARIMA) and deep learning (LSTM, GRU) models for predicting Net Promoter Score metrics that would drive business decisions for all Microsoft Office products.}}
+
+\vspace{4pt}
+
+\item{\cventry{Jan. 2017 - Jul. 2017}{Software Engineering Co-op}{Intuit}{San Diego, CA}{}{\vspace{3pt}Built an automated machine learning model generator, based on 13 million customers’ data that allows engineers to prototype quickly. Refactored TurboTax core data services to interface with GraphQL queries.}}
+
+\end{itemize}
+
+\section{Technical Skills}
+
+\vspace{4pt}
+
+\begin{itemize}
+
+\item \textbf{Programming Languages:} Python, Java, C, Matlab
+\item \textbf{Frameworks:} Flask, numpy, pandas, Keras, SpringMVC
+
+\end{itemize}
+
+\section{Projects}
+
+\vspace{4pt}
+
+\begin{itemize}
+
+\item \textbf{Sparker} Retrofittable self-driving car kit.
+\item \textbf{TrackVirus} Heatmap generator for the Zika virus based on CDC data and ML models that predict current spread.
+\item \textbf{Chalk} Smart calendar that prioritizes work using topological sorting.
+
+\end{itemize}
+
+\section{Awards}
+
+\vspace{4pt}
+
+\begin{itemize}
+    \item \textbf{MLH Prime} - \textit{Best Twitter Dev. Award}, Best use of the Twitter API, through TrackVirus.
+    \item \textbf{UBHacking} - \textit{Best Health Hack}, Reminder service for medicine using the Twilio API.
+\end{itemize}
+
+\section{Activities}
+
+\vspace{4pt}
+
+\begin{itemize}
+
+\item \textbf{BrickHack} Organizer (`15, `16, `17), RIT's flagship annual hackathon.
+
+\end{itemize}
+
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
+
